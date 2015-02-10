@@ -10,10 +10,5 @@ class Player
     @id
   end
 
-  def player2
-    id = !player1
-    @id << 'player2'
-  end
-
 
 end
