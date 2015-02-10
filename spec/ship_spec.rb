@@ -10,7 +10,7 @@ describe Ship do
   end
 
   it "should have the status 'sunk' when hit" do
-    ship.hit?
+    ship.hit
     expect(ship.status).to eq "sunk"
   end
 

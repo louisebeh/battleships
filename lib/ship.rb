@@ -1,5 +1,3 @@
-# require 'marker'
-
 class Ship
 
   def initialize
@@ -11,8 +9,12 @@ class Ship
     @size
   end
 
-  def hit?
+  def hit
     @hit = true
+  end
+
+  def missed
+    @hit = false
   end
 
   def status
