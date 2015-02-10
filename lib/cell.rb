@@ -1,4 +1,4 @@
-# module Board
+# module Game
 
   class Cell
 
@@ -7,8 +7,6 @@
     def initialize(value = '')
       @value = value
     end
-
-
 
 
   end
