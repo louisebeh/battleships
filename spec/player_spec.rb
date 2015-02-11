@@ -13,5 +13,7 @@ require 'player'
       expect(player_two.id) .to eq 'Player 2'
     end
 
+    # it 'can take a shot'
+    #   expect(player.shoot).to
 
   end
