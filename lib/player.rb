@@ -2,13 +2,14 @@
 
 class Player
 
-  def initialize
-    @id = 'player1'
+  attr_reader :id
+
+  def initialize(id = 'Player 1')
+    @id = id
   end
 
-  def id
-    @id
+  def self.player_two
+    new('Player 2')
   end
-
 
 end
