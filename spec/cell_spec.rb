@@ -10,19 +10,9 @@ require 'ship'
       expect(cell.value).to eq ''
     end
 
-    it "can be initialized with a value of 'missed'" do
-      cell = Cell.new("missed")
-      expect(cell.value).to eq "missed"
-    end
-
-    it "can be initialized with a value of 'hit'" do
-      cell = Cell.new("hit")
-      expect(cell.value).to eq "hit"
-    end
-
-    it "can be initialized with a value of 'ship'" do
-      cell = Cell.new("ship")
-      expect(cell.value).to eq "ship"
+    it "has a value" do
+      cell.value = "defined value"
+      expect(cell.value).to eq "defined value"
     end
 
 
