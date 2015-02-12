@@ -1,16 +1,29 @@
 #module Game
 class Board
 
-  def grid
-    @board = {}
-    ('a'..'b').map do |letter|
-      (1..2).map do |i|
-        @board.store["#{letter}#{i}"] = Cell.new
+  attr_reader :grid
+
+  def initialize(options)
+    @grid = {}
+    size=options[:size]
+    ('A'..(size + 64).chr).each do |letter|
+      (1..size).each do |number|
+        @grid[("#{letter}#{number}").to_sym] = options[:value]
+        end
       end
     end
-    board
+
+  def place(ship, coordinate)
+    get_coordinates(coordinate, ship.size).each do |coord|
+      grid[coord].value = ship
+  end
+end
+
+  def get_coordinates(start, size)
+    return_array = [start]
+    (size -1).times{return_array << return_array.last.next}
+    return_array
   end
 
 
 end
-
